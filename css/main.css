@@ -1,3 +1,31 @@
+/*------- Fonts -------*/
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Tinos:400,400i,700');
+
+/* Font Details
+    For Menu:
+    font-family: 'Tinos', serif;
+    For Body:
+    font-family: 'Bowlby One SC', cursive;
+*/
+
+/*------- Nav+Header -------*/
+
+.main-nav li {
+  font-family: 'Bowlby One SC', cursive;
+  color: darkgray;
+}
+
+.nav {
+
+}
+
+.nav-item {
+
+  background: lightgray;
+  padding: 0;
+  margin: 0;
+}
+
 .logo {
   position: fixed;
 }
@@ -6,12 +34,18 @@
   margin-top: 450px;
 }
 
-.subtitle {
-  z-index: 3;
-}
-
 #mc_embed_signup{
   background:#fff;
   clear:left;
   font:14px Helvetica,Arial,sans-serif;
+}
+
+
+
+/*------- Media Queries -------*/
+
+@media (max-width: 414px) {
+  .main-nav {
+    display: none;
+  }
 }
