@@ -3,25 +3,68 @@
 
 /* Font Details
     For Nav and Header:
-    font-family: 'Chivo', sans-serif;
+    font-family: 'Chivo', Arial, sans-serif;
     For Body:
-    font-family: 'Arvo', serif;
+    font-family: 'Arvo', 'Times New Roman', serif;
 */
+
+/*----------  Typography ----------*/
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Arvo', 'Times New Roman', serif;
+  line-height: 1.45;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.618em;
+  font-family: 'Chivo', Arial, sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.618em;
+  font-family: 'Chivo', Arial, sans-serif;
+  font-style: italic;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1.618em;
+}
+
+/*----------  Layout ----------*/
 
 .wrapper {
   width: 80%;
+  max-width: 1050px;
   margin: auto;
 }
 
 .main {
   padding-left: .3em;
   padding-right: .3em;
-  padding-bottom: 30em;
+  padding-bottom: 20em;
 }
+
+/*----------  Header+Nav ----------*/
 
 .header {
   position: fixed;
   width: 80%;
+  max-width: 1050px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -31,36 +74,13 @@
 }
 
 .main-nav {
+  height: 1em;
+  width: 100%;
   background: white;
 }
 
 .navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation a {
-  font-family: 'Chivo', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: black;
-  flex-grow: 1;
-}
-
-.navigation a:hover {
-  color: gray;
-  background-color: black;
-  border-bottom: 10px gray;
-}
-
-.navigation a:active {
-
+  display: none;
 }
 
 .logo {
@@ -72,11 +92,33 @@
   width: 100%;
   height: 25px;
   background: linear-gradient(white 55%, rgba(255, 255, 255, 0));
-}
+} /*Sits beneath the Logo to give a Fade out effect as the text scrolls*/
+
+/*----------  Body ----------*/
 
 #info {
-  padding-top: 12em;
+  padding-top: 1.5em;
 }
+
+.main a {
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+.main a:visited {
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/*----------  Footer ----------*/
 
 .footer {
   padding-top: 1em;
@@ -86,4 +128,91 @@
   position: fixed;
   bottom: 0;
   text-align: center;
+  font-style: italic;
+}
+
+/*----------  Media Queries ----------*/
+
+@media (min-width: 540px) {
+
+  /*----------  Typography ----------*/
+
+  p {
+    /*margin-bottom: 1.3em;*/
+  }
+
+  h1, h2, h3, h4 {
+    /*margin: 1.414em 0 0.5em;
+    line-height: 1.2;*/
+  }
+
+  h2 {
+    /*font-size: 4.236em;
+    font-family: 'Chivo', Arial, sans-serif;
+    font-weight: bold;*/
+  }
+
+  h3 {
+    /*font-size: 2.618em;
+    font-family: 'Chivo', Arial, sans-serif;
+    font-style: italic;*/
+  }
+
+  h4 {
+    /*font-size: 1.618em;*/
+  }
+
+  /*----------  Header+Nav ----------*/
+
+  .main-nav {
+    height: auto;
+    width: 100%;
+    background: white;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation a {
+    font-family: 'Chivo', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: .25em;
+    color: black;
+    flex-grow: 1;
+    transition: .3s;
+  }
+
+  .navigation a:hover {
+    color: #231F20;
+    background-color: #E0E0E0;
+  }
+
+  .navigation a:active {
+
+  }
+
+  /*----------  Body ----------*/
+
+  #info {
+    padding-top: 4em;
+  }
+
+}
+
+@media (min-width: 760px) {
+
+  /*----------  Body ----------*/
+
+  #info {
+    padding-top: 8em;
+  }
+
 }
