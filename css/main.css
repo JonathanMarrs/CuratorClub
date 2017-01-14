@@ -1,51 +1,89 @@
 /*------- Fonts -------*/
-@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Tinos:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700|Chivo:900');
 
 /* Font Details
-    For Menu:
-    font-family: 'Tinos', serif;
+    For Nav and Header:
+    font-family: 'Chivo', sans-serif;
     For Body:
-    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Arvo', serif;
 */
 
-/*------- Nav+Header -------*/
-
-.main-nav li {
-  font-family: 'Bowlby One SC', cursive;
-  color: darkgray;
+.wrapper {
+  width: 80%;
+  margin: auto;
 }
 
-.nav {
-
+.main {
+  padding-left: .3em;
+  padding-right: .3em;
+  padding-bottom: 30em;
 }
 
-.nav-item {
+.header {
+  position: fixed;
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-  background: lightgray;
-  padding: 0;
+.header > * {
+  flex: 1 100%;
+}
+
+.main-nav {
+  background: white;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  font-family: 'Chivo', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+  flex-grow: 1;
+}
+
+.navigation a:hover {
+  color: gray;
+  background-color: black;
+  border-bottom: 10px gray;
+}
+
+.navigation a:active {
+
 }
 
 .logo {
+  width: 100%;
+  height: 100%;
+}
+
+.gradientBar {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(white 55%, rgba(255, 255, 255, 0));
+}
+
+#info {
+  padding-top: 12em;
+}
+
+.footer {
+  padding-top: 1em;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0) 5%, white 25%);
+  color: black;
   position: fixed;
-}
-
-.mainContent {
-  margin-top: 450px;
-}
-
-#mc_embed_signup{
-  background:#fff;
-  clear:left;
-  font:14px Helvetica,Arial,sans-serif;
-}
-
-
-
-/*------- Media Queries -------*/
-
-@media (max-width: 414px) {
-  .main-nav {
-    display: none;
-  }
+  bottom: 0;
+  text-align: center;
 }
